@@ -1,6 +1,9 @@
 name: Market-Tracker
 on: 
   workflow_dispatch:
+  schedule:
+    # This runs at 21:30 UTC (4:30 PM ET) every Monday-Friday
+    - cron: '30 21 * * 1-5'
 
 jobs:
   run-bot:
